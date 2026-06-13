@@ -26,7 +26,22 @@ public class Game {
         System.out.println("3. Charge the bear and attempt to wrestle it.\n");
 
         System.out.print("Enter your choice number: ");
-        int choice = input.nextInt();
+        int choice1 = input.nextInt();
         System.out.println();
+
+        if (choice1 == 1) {
+            System.out.println("Your spear bounces off of the bear's helmet. Now defenseless, you can do nothing as the bear slashes your hand off with his greataxe. You lose 25 HP. Having learned your lesson, you avoid the bear and run deeper into the cave, entering a new room.");
+            player.setHealth(player.getHealth() - 25);
+            System.out.println("\n" + player.getName() + ", you now have " + player.getHealth() + " HP and " + player.getGold() + " gold.");
+        }
+        else if (choice1 == 2) {
+            System.out.println("A fabulous choice. Being more agile than the bear, you avoid it by running around. Entering the next room in the cave, you find a lootbox with 676 gold and a chestplate that gives you 67 hp.");
+            player.setHealth(player.getHealth() + 67);
+            player.setGold(player.getGold() + 676);
+            System.out.println("\n" + player.getName() + ", you now have " + player.getHealth() + " HP and " + player.getGold() + " gold.");
+        }
+        else if (choice1 == 3) {
+            System.out.println("Charging the bear wasn't a smart idea. You get folded and die instantly. Better luck next time!");
+        }
     }
 }
