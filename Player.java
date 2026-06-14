@@ -22,11 +22,19 @@ public class Player {
         return gold;
     }
 
+    public boolean getKey() {
+        return hasKey;
+    }
+
     public void setHealth(int health) {
         this.health = health;
     }
 
     public void setGold(int gold) {
         this.gold = gold;
+    }
+
+    public void setKey(boolean key) {
+        hasKey = key;
     }
 }
